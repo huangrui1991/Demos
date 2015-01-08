@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowInteraction", "ApplicationDemo\WindowInteraction.csproj", "{760AB989-1D28-4601-B20B-B647F3A46A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutedEventDemo", "RoutedEventDemo\RoutedEventDemo.csproj", "{94F6BB51-D67D-4008-A77F-AF10FB305982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandBindingDemo", "CommandBindingDemo\CommandBindingDemo.csproj", "{7807E4BD-D0A5-4F6F-AA3C-D0D615CDC338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{760AB989-1D28-4601-B20B-B647F3A46A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760AB989-1D28-4601-B20B-B647F3A46A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760AB989-1D28-4601-B20B-B647F3A46A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760AB989-1D28-4601-B20B-B647F3A46A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F6BB51-D67D-4008-A77F-AF10FB305982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F6BB51-D67D-4008-A77F-AF10FB305982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F6BB51-D67D-4008-A77F-AF10FB305982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F6BB51-D67D-4008-A77F-AF10FB305982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7807E4BD-D0A5-4F6F-AA3C-D0D615CDC338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7807E4BD-D0A5-4F6F-AA3C-D0D615CDC338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7807E4BD-D0A5-4F6F-AA3C-D0D615CDC338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7807E4BD-D0A5-4F6F-AA3C-D0D615CDC338}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

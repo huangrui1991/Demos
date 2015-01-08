@@ -1,0 +1,19 @@
+﻿<Window x:Class="CommandBindingDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="NewCommand_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" Margin="5">
+            <Button Name="NewButton" Content="New" Padding="5" Margin="5" Command="New"></Button>
+            <Button Command="Cut">Cut</Button>
+            <Button Command="Copy">Copy</Button>
+            <Button Command="Paste">Paste</Button>
+        </ToolBar>
+        <TextBox DockPanel.Dock="Top" Height="123" Name="textbox2" Padding="5" Margin="5"></TextBox>
+        <TextBox Name="textbox1" Padding="5" Margin="5"></TextBox>
+        
+    </DockPanel>
+</Window>

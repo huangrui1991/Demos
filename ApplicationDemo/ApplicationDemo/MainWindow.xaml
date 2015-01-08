@@ -1,0 +1,9 @@
+﻿<Window x:Class="ApplicationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Button Name="Create" Content="Click to create a Document" Padding="10" Click="Create_Click"></Button>
+        <Button Name="Refresh" Content="Click to refresh a Document" Padding="10" Click="Refresh_Click"></Button>
+    </StackPanel>
+</Window>
