@@ -1,0 +1,54 @@
+﻿<HTML>
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <TITLE>Displaying MapTips in the MapControl</TITLE>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="http://help.arcgis.com/en/sdk/10.0/common/style/esri_sdk_web.css">
+  </HEAD>
+  <BODY topmargin="0" id="bodyID" class="dtBODY">
+    <div class="sdk_topic">
+      <div id="nsbanner" esri_sdk_guid="8B846D32-4894-4dbf-A334-3BB9C1028C00" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+        <div id="TitleRow" class="bannertitle">
+          <table class="titleWithBackground">
+            <td>
+              <H1>Displaying MapTips in the MapControl<a name="ICallout"></a></H1>
+            </td>
+          </table>
+        </div>
+      </div><br xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><div class="main">
+        <fieldset class="Property" style="width: auto" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+          <legend class="PropertyName">Purpose</legend><span class="PropertyValue"><purpose>This sample demonstrates displaying MapTips in the MapControl using the IMapControl3.ShowMapTips and IMapControl3.TipStyle properties.</purpose></span></fieldset><br xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><h4>How to use</h4>
+        <p>See 
+        <a href="http://help.arcgis.com/en/sdk/10.1/arcobjects_net/conceptualhelp/index.html#/how_to_use_arcgis_samples/0001000001w2000000/">How to use ArcGIS samples</a>
+        for help running the sample.</p>
+        <ol>
+          <li>Add feature data to the MapControl. </li>
+          <li>Select the layer to display MapTips, then select the display field for displaying MapTips. </li>
+          <li>Move the mouse pointer over the MapControl. </li><br></ol>
+        <h4>Additional information</h4>The Browse dialog box allows users to search and select map documents, which are loaded into the MapControl using the LoadMxFile method. The name of each layer within the MapControl is added to a combo box at the same index. When a layer name is selected in the combo box, the ILayerFields and IField interfaces are used to loop through the layer's fields. The name of each field is added to a second combo box. If the field name is the same as the IFeatureLayer.DisplayField, it is highlighted in the combo box. The DisplayField is the field from which ILayer.TipText is obtained and can be changed by selecting a different field name from the combo box. <br><br>A check box indicates whether MapTips will be displayed for the selected layer using the ILayer.ShowTips property. If ILayer.ShowTips is true, the MapControl will display the ILayer.TipText value as the mouse pointer moves over the display. The OnMouseDown event of the MapControl uses the TrackRectangle method to zoom in if clicked, and the Pan method if right-clicked. <br><br><br><br><hr tabIndex="-1" xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><br xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><table class="dtTable" cellspacing="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+          <tr>
+            <th>Development licensing</th>
+            <th>Deployment licensing</th>
+          </tr>
+          <tr style="empty-cells:show">
+            <td>Engine Developer Kit</td>
+            <td>Engine</td>
+          </tr>
+          <tr style="empty-cells:show">
+            <td>
+            </td>
+            <td>ArcGIS for Desktop Basic</td>
+          </tr>
+          <tr style="empty-cells:show">
+            <td>
+            </td>
+            <td>ArcGIS for Desktop Standard</td>
+          </tr>
+          <tr style="empty-cells:show">
+            <td>
+            </td>
+            <td>ArcGIS for Desktop Advanced</td>
+          </tr>
+        </table><br xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><br><br></div>
+    </div>
+  </BODY>
+</HTML>

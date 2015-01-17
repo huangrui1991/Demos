@@ -1,0 +1,58 @@
+﻿<Fluent:RibbonWindow x:Class="AE_with_Ribbon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Fluent ="urn:fluent-ribbon"
+        xmlns:WF ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:EsriLisence ="clr-namespace:ESRI.ArcGIS;assembly=ESRI.ArcGIS.Version"
+        xmlns:Esri ="clr-namespace:ESRI.ArcGIS.Controls;assembly=ESRI.ArcGIS.AxControls"
+        xmlns:Local="clr-namespace:AE_with_Ribbon"
+        Title="MainWindow" Height="471.844" Width="525" WindowState="Maximized">
+    <Window.DataContext>
+        <Local:FileCommands></Local:FileCommands>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Fluent:Ribbon Grid.Row="0">
+            <Fluent:Ribbon.Menu>
+                <Fluent:Backstage Name="BackStage" Header="Home">
+                    <Fluent:BackstageTabControl>
+                        <Fluent:Button Header="OpenFile" Name="BackStageOpenFileButton" Command="{Binding OpenFileCommand}" >
+                        </Fluent:Button>
+                        <Fluent:Button Header="AddData" Name="BackStageAddDataButton"></Fluent:Button>
+                    </Fluent:BackstageTabControl>
+                </Fluent:Backstage>
+            </Fluent:Ribbon.Menu>
+            <Fluent:Ribbon.Tabs>
+                <Fluent:RibbonTabItem Header="File" Name="FileRibbonTab">
+                    <Fluent:RibbonTabItem.Groups>
+                        <Fluent:RibbonGroupBox Name="OpenGroupBox" Header="Open" >
+                            <Fluent:Button Header="OpenFile" Name="OpenFileButton" Size="Middle" Command="{Binding OpenFileCommand}"></Fluent:Button>
+                            <Fluent:Button Header="AddData" Name="AddDataButton" Size="Middle"></Fluent:Button>
+                        </Fluent:RibbonGroupBox>
+                    </Fluent:RibbonTabItem.Groups>
+                </Fluent:RibbonTabItem>
+            </Fluent:Ribbon.Tabs>
+        </Fluent:Ribbon>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <WindowsFormsHost Name="mapHost" Margin="5" Grid.Column="1" Grid.Row="0" >
+                
+            </WindowsFormsHost>
+            <!--<TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding str}"></TextBlock>-->
+            <WindowsFormsHost Margin="5" Name="tocHost" HorizontalAlignment="Left" Width="173" Grid.Column="0" Grid.Row="0">
+                
+            </WindowsFormsHost>
+            <TextBlock Height="24" VerticalAlignment="Bottom" Name="textBlock" Grid.Row="1" Grid.ColumnSpan="2"></TextBlock>
+        </Grid>
+    </Grid>
+</Fluent:RibbonWindow>
