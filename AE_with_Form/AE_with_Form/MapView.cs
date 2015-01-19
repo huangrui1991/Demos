@@ -140,6 +140,9 @@ namespace AE_with_Form
             InitToolbarMenu();
             InitPalette();
             axTOCControl1.LabelEdit = esriTOCControlEdit.esriTOCControlManual;
+            axMapControl1.AutoMouseWheel = true;
+            axMapControl1.AutoKeyboardScrolling = true;
+            axMapControl1.KeyIntercept = (int)esriKeyIntercept.esriKeyInterceptArrowKeys;
             SetBuddy();
             string filePath = @"C:\hr\experiment\gis数据\arcgis shp 武汉数据\电子地图.mxd";
             if (axPageLayoutControl1.CheckMxFile(filePath))
@@ -180,6 +183,8 @@ namespace AE_with_Form
                 e.canEdit = false;
         }
         #endregion
+
+        
 
         
     }
