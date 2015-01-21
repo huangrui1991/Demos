@@ -8,7 +8,7 @@
         xmlns:Local="clr-namespace:AE_with_Ribbon"
         Title="MainWindow" Height="471.844" Width="525" WindowState="Maximized">
     <Window.DataContext>
-        <Local:FileCommands></Local:FileCommands>
+        <Local:FileCommands x:Name="command"></Local:FileCommands>
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
@@ -45,12 +45,9 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <WindowsFormsHost Name="mapHost" Margin="5" Grid.Column="1" Grid.Row="0" >
-                
+            <WindowsFormsHost Name="mapHost" Margin="5" Grid.Column="1" Grid.Row="0">                
             </WindowsFormsHost>
-            <!--<TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding str}"></TextBlock>-->
             <WindowsFormsHost Margin="5" Name="tocHost" HorizontalAlignment="Left" Width="173" Grid.Column="0" Grid.Row="0">
-                
             </WindowsFormsHost>
             <TextBlock Height="24" VerticalAlignment="Bottom" Name="textBlock" Grid.Row="1" Grid.ColumnSpan="2"></TextBlock>
         </Grid>

@@ -12,27 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ESRI.ArcGIS.Controls;
 
-namespace AE_with_Ribbon
+namespace AvalonDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Fluent.RibbonWindow
+    public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
-            command = new FileCommands();
             InitializeComponent();
-
-            mapHost.Child = command.MapControl;
-            tocHost.Child = command.TOCControl;
-            command.MapControl.CreateControl();
-            command.TOCControl.CreateControl();
-            command.TOCControl.SetBuddyControl(command.MapControl);            
         }
-
     }
 }

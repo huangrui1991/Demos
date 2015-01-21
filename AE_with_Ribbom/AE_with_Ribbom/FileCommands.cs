@@ -18,41 +18,25 @@ namespace AE_with_Ribbon
 {
     public class FileCommands : ObservableObject
     {
-        private static RelayCommand _OpenFileCommand;
-        private MapModel _Model;
+        //private static RelayCommand _OpenFileCommand;
+
+        private AxMapControl _MapControl = new AxMapControl();
+        private AxTOCControl _TOCControl = new AxTOCControl();
         
         public FileCommands()
         {
             //Init OpenFileCommand
-            _Model = new MapModel();
-            _OpenFileCommand = new RelayCommand(OpenFileCommand_Executed, OpenFileCommand_CanExecute);
         }
-
-        public RelayCommand OpenFileCommand
-        {
-            get
-            {
-                return _OpenFileCommand;
-            }
-        }
-
-        
 
         public AxMapControl MapControl
         {
-            get { return _Model.MapControl; }
-            set { _Model.MapControl = value; }
+            get { return _MapControl; }
         }
 
-        public string str
-        {
-            get { return "hehe"; }
-        }
 
         public AxTOCControl TOCControl
         {
-            get { return _Model.TOCControl; }
-            set { _Model.TOCControl = value; }
+            get { return _TOCControl; }
         }
 
         public void OpenFileCommand_Executed()
@@ -74,10 +58,9 @@ namespace AE_with_Ribbon
                 {
                     string dialogPath = filePath.Substring(0, filePath.LastIndexOf("\\"));
                     string fileName = filePath.Substring(filePath.LastIndexOf("\\") + 1, filePath.Length - filePath.LastIndexOf("\\") - 1);
-                    _Model.TOCControl.SetBuddyControl(_Model.MapControl);
-                    _Model.MapControl.AddShapeFile(dialogPath, fileName);
+                    MapControl.AddShapeFile(@"C:\hr\experiment\shape1", "shape1.shp");
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
                 }
@@ -89,5 +72,7 @@ namespace AE_with_Ribbon
         {
             return true; 
         }
+
+        public ICommand OpenFileCommand { get { return new RelayCommand(OpenFileCommand_Executed, OpenFileCommand_CanExecute); } }
     }
 }
