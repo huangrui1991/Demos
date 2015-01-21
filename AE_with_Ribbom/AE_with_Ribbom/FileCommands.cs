@@ -58,7 +58,7 @@ namespace AE_with_Ribbon
                 {
                     string dialogPath = filePath.Substring(0, filePath.LastIndexOf("\\"));
                     string fileName = filePath.Substring(filePath.LastIndexOf("\\") + 1, filePath.Length - filePath.LastIndexOf("\\") - 1);
-                    MapControl.AddShapeFile(@"C:\hr\experiment\shape1", "shape1.shp");
+                    MapControl.AddShapeFile(dialogPath, fileName);
                 }
                 catch (Exception e)
                 {
