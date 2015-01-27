@@ -4,7 +4,7 @@
         Title="MainWindow" Height="350" Width="350">
     
     <StackPanel>
-        <Button Name="Smile" Content="Smile Button" FontSize="14" Padding="5" Background="{StaticResource TileBrush}"></Button>
+        <Button Name="Smile" Content="Smile Button" FontSize="14" Padding="5" Background="{StaticResource TileBrush}" Click="Smile_Click"></Button>
         <Button Name="Sad" Content="Sad Button"></Button>
         <Button Name="Shuai" Content="Shuai Button"></Button>
     </StackPanel>
